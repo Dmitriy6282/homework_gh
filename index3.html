@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        main{
+            width: 600px;
+            height: 600px;
+            background-color: rgb(224, 216, 216);
+            padding: 100px;  
+        }
+       .circle{
+           width: 400px;
+           height: 400px;
+           border: 2px solid rgb(45, 148, 148);
+           border-radius: 50%;
+           position: relative;
+       }
+       .tochka{
+           width: 5px;
+           height: 5px;
+           border: 2px solid rgb(45, 148, 148);
+           border-radius: 50%;
+           background-color: rgb(45, 148, 148);
+           position: absolute;
+           left: 202.5px;
+           top: 202.5px;
+       }
+       .strelka1{
+           width: 150px;
+           height: 2px;
+           background-color: rgb(45, 148, 148);
+           position: absolute;
+           left: 205px;
+           top: 205px;
+           transform-origin: 0 0 ;
+           transform:rotate(0deg);
+           animation: move 2s linear infinite;
+       }
+       .strelka2{
+        width: 100px;
+           height: 1px;
+           background-color: rgb(45, 148, 148);
+           position: absolute;
+           left: 205px;
+           top: 205px;
+           transform-origin: 0 0 ;
+           transform:rotate(0deg);
+           animation: move 5s linear infinite;
+       }
+       @keyframes move{
+           from{transform:rotate(0deg)}
+           to{transform:rotate(360deg)}
+       }
+       /* https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout */
+
+       
+       
+
+    </style>
+</head>
+<body>
+  <main>
+    <div class="circle">
+        <div class="strelka1"></div>
+        <div class="strelka2"></div>
+        <div class="tochka"></div>
+    </div>
+  </main>
+
+
+
+
+
+
+
+    
+</body>
+</html>

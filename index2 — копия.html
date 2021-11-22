@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dz4</title>
+    <style>
+      .block {
+          width: 800px;
+          height: 400px;
+          background-color: grey;
+          display: flex;
+          position: relative;
+          perspective: 250px;
+      }
+      .text{
+          /* text-align: center; */
+          margin: auto;
+          font-size: 50px;
+          font-weight: bold;
+      }
+      .door{
+          width: 350px;
+          height: 300px;
+          background-color: rebeccapurple;
+          border: 1px solid rgb(12, 1, 22);
+          position: absolute;
+          top: 50px;
+      }
+      .door1{       
+          left: 50px;
+      }
+      .door2{
+          right: 50px;
+      }
+      /* .door1:hover{
+          transform-origin: 0 0 ;
+          /* transform: rotateY(40deg) skewY(-10grad) ; */
+          /* transform-style: preserve-3d; */
+          /* transform: rotateY(70deg); */
+      /* }
+      .door2:hover{
+          transform-origin: 0 right ;
+          /* transform: rotateY(40deg) skewY(-10grad) ; */
+          /* transform-style: preserve-3d; */
+          /* transform: rotateY(-70deg); */
+      /* }  */
+      .block:hover .door1_open {
+            transform-origin: 0 0;
+            /* transform: rotateY(40deg) skewY(-10grad) ; */
+            transform-style: preserve-3d;
+            transform: rotateY(70deg);
+
+        }
+
+        .block:hover .door2_open {
+            transform-origin: right 0;
+            /* transform: rotateY(40deg) skewY(-10grad) ; */
+            transform-style: preserve-3d;
+            transform: rotateY(-70deg);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="block">
+       <p class="text">HELLO</p>
+       <div class="door door1 door1_open"></div>
+       <div class="door door2 door2_open"></div>
+    </div>
+    
+</body>
+</html>

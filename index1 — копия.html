@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            position: relative;
+            outline: 2px solid green;
+        }
+        .images{
+            width: 600px;
+            height: 400px;
+            border: 1px solid black;
+            overflow: hidden;    
+        }
+        .txt{
+            width: 600px;
+            height: 400px;
+            border: 1px solid black;
+            display: flex;
+            background: white;
+        }
+        .txt p{
+            margin: auto;
+        }
+        .block{
+            display: flex;
+            position: relative;   
+        }
+        .block2 div:nth-child(3n){
+            order: -1;
+        }
+        .plashka{
+            position: absolute;
+            width: 1200px;
+            height: 400px;
+            background-color: transparent;
+            top: 0;
+            transition: background-color 0.3s, width 1s;
+        }
+        .plashka:hover{
+            background-color: rgba(72, 158, 161,0.5);
+        }
+        .plashka:hover~.images img{
+            width: 800px;
+            animation: start 1s ease;
+        }
+        @keyframes start {
+            from{
+                width: 800px;
+            }
+            to {width: 1100px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="block block1">
+            <div class="plashka"></div>
+            <div class="txt">
+                <p>HELLO WORLD</p>
+            </div>
+        <div class="images">
+            <img src="cactus-gd03a8077c_640.jpg" alt="картинка">
+        </div>
+    </div>
+    <div class="block block2">
+        <div class="plashka"></div>
+        <div class="txt">
+            <p>HELLO WORLD</p>
+        </div>
+    <div class="images">
+        <img src="cactus-gd03a8077c_640.jpg" alt="картинка">
+    </div>
+</div>
+<div class="block">
+    <div class="plashka"></div>
+    <div class="txt">
+        <p>HELO WORLD</p>
+    </div>
+<div class="images">
+    <img src="cactus-gd03a8077c_640.jpg" alt="картинка">
+</div>
+</div>
+    </div>  
+</body>
+</html>
